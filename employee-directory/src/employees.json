@@ -1,0 +1,44 @@
+[
+	{
+		"firstName": "Jeremy",
+		"lastName": "Johnson",
+		"role": "Manager",
+		"department": "Engineering"
+	},
+	{
+		"firstName": "Jeremiah",
+		"lastName": "Trotter",
+		"role": "Engineer",
+		"department": "Engineering"
+	},
+	{
+		"firstName": "Gerald",
+		"lastName": "Bruce",
+		"role": "Temp",
+		"department": "Human Resources"
+	},
+	{
+		"firstName": "Candice",
+		"lastName": "Carlisle",
+		"role": "Manger",
+		"department": "Human Resources"
+	},
+	{
+		"firstName": "Cindy",
+		"lastName": "Loowho",
+		"role": "Employee",
+		"department": "Accounting"
+	},
+	{
+		"firstName": "Jeremiah",
+		"lastName": "Poutassi",
+		"role": "Bossman",
+		"department": "CEO"
+	},
+	{
+		"firstName": "Phillip",
+		"lastName": "McCrevis",
+		"role": "Employee",
+		"department": "IT"
+	}
+]
