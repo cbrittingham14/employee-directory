@@ -41,7 +41,7 @@ class Container extends Component {
 				<Employee emp={this.state.employees} filter={this.state.filter} />
 			</div>
 		);
-	}
+	};
     
 };
 

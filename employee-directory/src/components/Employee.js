@@ -1,4 +1,6 @@
 import React from 'react';
+import TableHead from './TableHead';
+import Table from './Table';
 
 const Employee = (props) => {
 
@@ -18,23 +20,24 @@ const Employee = (props) => {
 	});
 
 	toRender = filtered.map(i => 
-		<ul key={i.id}>
-			<li key={i.firstName}>{i.firstName}</li>
-			<li key={i.lastName}>{i.lastName}</li>
-		</ul>
+		<tbody key={i.id}>
+			<tr>
+				<td>{i.id}</td>
+				<td>{i.firstName}</td>
+				<td>{i.lastName}</td>
+				<td>{i.role}</td>
+				<td>{i.department}</td>
+			</tr>
+		</tbody>
+		
 	);
 	console.log('all' , all);
 	console.log('filtered array ',filtered)
 	return (
-		<div>
-			<div>We rendered Employee</div>
-			<div>
-				List:
-					<div>
-						{toRender}
-					</div>
-			</div>
-		</div>
+		<Table>
+			<TableHead />
+			{toRender}
+		</Table>
 	);
 };
 
