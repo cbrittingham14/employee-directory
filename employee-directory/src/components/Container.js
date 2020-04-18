@@ -33,11 +33,9 @@ class Container extends Component {
             name="filter"
             onChange={this.handleInputChange}
             type="text"
-            placeholder="Filter"
+            placeholder="Filter by Name"
           />
-					<button onClick={this.handleSubmit}>Submit</button>
 				</form>
-				<div>Hello</div>
 				<Employee emp={this.state.employees} filter={this.state.filter} />
 			</div>
 		);
