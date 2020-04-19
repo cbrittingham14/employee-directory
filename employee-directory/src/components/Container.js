@@ -3,7 +3,7 @@ import employees from '../employees.json';
 import Employee from './Employee';
 
 class Container extends Component {
-	text = '';
+	
 	state = {
 		employees,
 		filter: '',
@@ -12,19 +12,26 @@ class Container extends Component {
 	};
 
 	clearButton;
+	text = '';
 
+	componentDidUpdate(){
+		this.setReverseSort();
+	}
+//update the state with the filter text from the input
 	handleInputChange = e => {
 		this.setState({
 			filter: e.target.value
 		});
 	};
 
+	//reset the state to initial value
 	clearSort = () => {
 		this.setState({
 			isSorted: false,
 			shouldSort: false
 		});
 	};
+	//update the view with the clear sort button if needed
 	setReverseSort = () =>{
 		this.clearButton = (<p />);
 		if(this.state.shouldSort){
@@ -35,16 +42,15 @@ class Container extends Component {
 			);
 		}
 	};
+	//change state to sort 
 	sortCategory = e => {
-
 		e.preventDefault();
 		this.setState({
 			isSorted: !this.state.isSorted,
 			shouldSort: true
 		});
-
-		this.setReverseSort();
 	};
+
 	render() {
 		return(
 			<div>
@@ -62,7 +68,7 @@ class Container extends Component {
 					</div>
 					<div className='col'>
 						<button type="submit" onClick={this.sortCategory} className="btn btn-success">
-						Sort
+						Sort by Dept.
 						</button>
 					</div>
 					<div className='col'>

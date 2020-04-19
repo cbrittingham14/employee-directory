@@ -9,6 +9,7 @@ const Employee = ({ emp, filter, isSorted, shouldSort }) => {
 	let sorted;
 	let arrayToRender;
 
+	//compare function to sort departments alphabetically
 	const compare = (a,b) => {
 		const nameA = a.department.toLowerCase();
 		const nameB = b.department.toLowerCase();
@@ -28,12 +29,14 @@ const Employee = ({ emp, filter, isSorted, shouldSort }) => {
 		return (first.indexOf(filter) >= 0||last.indexOf(filter) >= 0);
 	});
 
+	// get sorted array and reverse if required
 	sorted = [...filtered].sort(compare);
 	if(shouldSort && !isSorted){
 		sorted.reverse();
 	}
 	arrayToRender = sorted;
 
+	//display unsorted array, filtered if there is a filter
 	if (!shouldSort){
 		arrayToRender = filtered;
 	}
