@@ -17,7 +17,7 @@ class Container extends Component {
 	componentDidUpdate(){
 		this.setReverseSort();
 	}
-//update the state with the filter text from the input
+	//update the state with the filter text from the input
 	handleInputChange = e => {
 		this.setState({
 			filter: e.target.value
